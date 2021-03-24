@@ -13,7 +13,7 @@ class Post < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  def optimized_image(image,x,y)
+  def optimized_image (image, x,y)
     return image.variant(resize_to_fill: [x, y]).processed
   end
 end
