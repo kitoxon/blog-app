@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   resources :posts do
     resources :comments
+    resources :likes
   end
+  post 'images/download_image'
+  get 'images/get_image_url'
+
   devise_for :users
   root 'posts#index'
   get 'about', to: 'pages#about'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 

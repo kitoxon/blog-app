@@ -13,18 +13,18 @@ User.create!(email: "munkhjin@example.com",
     admin: true)
 
 
-require 'uri'
-11.times do |i|
+
+
+
+
+1000.times do |i|
     post = Post.new
-    post.title= Faker::Lorem.sentence(word_count: 3, random_words_to_add: 7)
-    post.body= Faker::Lorem.paragraph_by_chars(number:5000)
-    post.user =  User.first
-    url = 'https://picsum.photos/1920/1080'
-    
-    filename = File.basename(URI.parse(url).path)
-    file = URI.open('https://picsum.photos/1920/1080')
-    post.thumbnail.attach(io: File.open("https://picsum.photos/1920/1080"), filename: "#{i}_thumbnail.jpg", content_type:"image/jpg")
-    post.banner.attach(io: File.open("https://picsum.photos/1920/1080"), filename: "#{i}_banner.jpg", content_type:"image/jpg")
-    post.views = Faker::Number.between(from: 1, to: 500)
+    post.title = Faker::Lorem.sentence(word_count: 3, random_words_to_add: 7)
+    post.body = Faker::Lorem.paragraph_by_chars(number: 1500)
+    post.user = User.first
+    #post.thumbnail.attach(io: open("https://picsum.photos/1920/1080"), filename: "#{i}_thumbnail.jpg")
+    #post.banner.attach(io: open("https://picsum.photos/1920/1080"), filename: "#{i}_banner.jpg")
+    post.views = Faker::Number.between(from: 1, to: 5000)
     post.save
+
 end

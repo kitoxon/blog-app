@@ -14,6 +14,9 @@ class PostsController < ApplicationController
   def show
     views = @post.views + 1
     @post.update(views: views)
+    @images  = ["banner.png", "banner1.jpg", "banner2.jpg", "lake.jpg", "image5.jpg"]
+    @random_no = rand(5)
+    @random_image = @images[@random_no]
   end
 
   # GET /posts/new
