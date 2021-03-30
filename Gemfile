@@ -33,7 +33,7 @@ gem 'faker'
 gem 'open-uri'
 gem 'active_storage_validations'
 gem 'image_suckr'
-
+gem 'slim-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
