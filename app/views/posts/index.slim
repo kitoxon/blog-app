@@ -1,0 +1,26 @@
+.container
+  - @posts.each do |post|
+    .row
+      .card.mb-3
+        - if(rand(5) == 1)
+          = image_tag "banner", class:"d-block w-100"
+        - elsif(rand(5) == 2)
+          = image_tag "banner1", class:"d-block w-100"
+        - elsif(rand(5) == 3)
+          = image_tag "banner2", class:"d-block w-100"
+        - elsif(rand(5) == 4)
+          = image_tag "banner3", class:"d-block w-100"
+        - else(rand(5) == 5)
+          = image_tag "banner4", class:"d-block w-100"
+        .card-body
+          h5.card-title
+            = link_to post.title, post
+          p.card-text
+            = post.body.to_plain_text.truncate_words(50)
+          p.card-text
+            small.text-muted
+              = post.updated_at.strftime("%A, %B %e, %Y")
+              | by #{post.user.username} | #{pluralize(post.views, "View")}
+  .row
+    .digg_pagination
+      = will_paginate @posts, :container => false

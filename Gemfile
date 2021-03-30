@@ -33,7 +33,14 @@ gem 'faker'
 gem 'open-uri'
 gem 'active_storage_validations'
 gem 'image_suckr'
+<<<<<<< HEAD
 gem 'slim-rails'
+=======
+gem 'uri'
+gem "down", "~> 5.0"
+gem 'slim-rails'
+
+>>>>>>> origin
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -45,7 +52,8 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
-  # Display performance information such as SQL time and flame graphs for each request in your browser.
+  # Display performance post.thumbnail.attach(io: open("https://picsum.photos/1920/1080"), filename: "#{i}_thumbnail.jpg")
+ 
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'

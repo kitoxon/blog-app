@@ -1,0 +1,11 @@
+.container
+  article.table-info
+    div
+      div
+        p
+          strong
+            = comment.name
+            | \:
+          = comment.comment
+    = link_to 'Delete', [comment.post, comment],                                   \
+      method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } \
