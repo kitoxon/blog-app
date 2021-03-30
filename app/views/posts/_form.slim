@@ -1,10 +1,10 @@
 = form_with model: post do |f|
   .form-inputs
-    = f.text_field :title, class:'form-control string'
-    = f.label :thumbnail, class:'form-control'
+    = f.text_field :title, class:'form-control string mb-5', placeholder:'Title'
+    = f.label :thumbnail, class:'form-control mt-5'
     = f.file_field :thumbnail
-    = f.label :banner, class:'form-control'
+    = f.label :banner, class:'form-control mt-5'
     = f.file_field :banner
-    = f.rich_text_area :body
+    = f.rich_text_area :body, placeholder:'Text area'
   .form-actions
     = f.button :submit, class:"btn btn-primary btn-sm mt-2"
